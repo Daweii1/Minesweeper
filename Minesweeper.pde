@@ -106,6 +106,8 @@ public class MSButton
     // called by manager
     public void mousePressed () 
     {
+      
+      isWon();
         clicked = true;
         if(mouseButton == RIGHT) {
           if(flagged == false){
@@ -134,9 +136,10 @@ public class MSButton
     {    
       
       
-        if (flagged)
+        if (flagged){
             fill(0);
-            isWon();
+            
+        }
          else if( clicked && mines.contains(this) ) 
            fill(255,0,0);
         else if(clicked)
@@ -175,4 +178,3 @@ public class MSButton
         return flagged;
     }
 }
-
