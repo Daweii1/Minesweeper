@@ -133,9 +133,10 @@ public class MSButton
     public void draw () 
     {    
       
-      isWon();
+      
         if (flagged)
             fill(0);
+            isWon();
          else if( clicked && mines.contains(this) ) 
            fill(255,0,0);
         else if(clicked)
